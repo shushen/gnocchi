@@ -388,7 +388,7 @@ function install_gnocchi {
         _gnocchi_install_grafana
     fi
 
-    install_gnocchiclient
+    #install_gnocchiclient
 
     [ "$GNOCCHI_USE_KEYSTONE" == "True" ] && EXTRA_FLAVOR=,keystonemiddleware
 
