@@ -90,6 +90,7 @@ function is_gnocchi_enabled {
 # gnocchi_swift         gnocchi_swift  ResellerAdmin  (if Swift is enabled)
 create_gnocchi_accounts() {
     # Gnocchi
+    set -x
     if [[ "$ENABLED_SERVICES" =~ "gnocchi-api" ]]; then
         create_service_user "gnocchi"
 
@@ -109,6 +110,7 @@ create_gnocchi_accounts() {
             get_or_add_user_project_role "ResellerAdmin" $gnocchi_swift_user "gnocchi_swift"
         fi
     fi
+    set +x
 }
 
 function _cleanup_gnocchi_apache_wsgi {
