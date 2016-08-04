@@ -16,7 +16,7 @@ futures
 requests
 six
 sqlalchemy
-sqlalchemy-utils
+sqlalchemy-utils==0.30.0
 stevedore
 tooz>=0.11
 voluptuous
